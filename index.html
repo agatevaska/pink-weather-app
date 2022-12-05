@@ -10,13 +10,14 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,700&family=Source+Sans+Pro&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather app</title>
   </head>
 
@@ -47,14 +48,17 @@
         </form>
 
         <div class="date-time">
-          <small> Monday 17:18</small>
+          <small> Last updated Monday 17:18</small>
         </div>
         <h1>Riga</h1>
         <div class="row">
-          <div class="col-6">7 C | F</div>
+          <div class="col-6">
+            <span class="main-temp">7</span>
+            C | F
+          </div>
           <div class="col-6">
             <ul>
-              <li>Cloudy</li>
+              <li class="description">Cloudy</li>
               <li>Wind:2km/h</li>
               <li>Humidity: 20%</li>
             </ul>
