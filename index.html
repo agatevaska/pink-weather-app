@@ -11,34 +11,41 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,700&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
     <title>Weather app</title>
   </head>
 
   <body>
     <div class="container">
       <div class="weather-app">
-       
-          <form class="search-bar">
-            <input
-              type="text"
-              class="enter-city"
-              placeholder="Enter a city name..."
-              id="city-input"
-            />
+        <form class="search-bar">
+          <input
+            type="text"
+            class="enter-city"
+            placeholder="Enter a city name..."
+            id="city-input"
+          />
 
-            <input
-              type="submit"
-              class="btn btn-outline-secondary"
-              id="submit"
-              value="Search"
-            />
-         
-   
-        <button id="weather-refresh" class="float-left btn btn-outline-secondary">
-          Current Location
-        </button>
-          </form>
-        </div>
+          <input
+            type="submit"
+            class="btn btn-outline-secondary"
+            id="submit"
+            value="Search"
+          />
+
+          <button
+            id="weather-refresh"
+            class="float-left btn btn-outline-secondary"
+          >
+            Current Location
+          </button>
+        </form>
+
         <div class="date-time">
           <small> Monday 17:18</small>
         </div>
@@ -53,11 +60,12 @@
             </ul>
           </div>
         </div>
+        <div class="author">
+          <a href="https://github.com/agatevaska/pink-weather-app">
+            Open-source code </a
+          >, by Agate Dārta Vaska
+        </div>
       </div>
-      <div class="author">
-      <a href="https://github.com/agatevaska/pink-weather-app">
-      Open-source code </a>, by Agate Dārta Vaska
-      </div> 
     </div>
     <script src="src/index.js"></script>
   </body>

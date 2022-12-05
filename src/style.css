@@ -1,1 +1,21 @@
-
+.weather-app {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid rgb(228, 180, 220);
+  border-radius: 20px;
+  background-color: rgb(255, 229, 243);
+}
+.date-time {
+  text-align: center;
+  padding-top: 30px;
+}
+h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+  font-family: "Playfair Display", serif;
+}
+.row {
+  padding: 30px;
+}
