@@ -16,7 +16,48 @@
 
   <body>
     <div class="container">
-      <h1>Weather app</h1>
+      <div class="weather-app">
+       
+          <form class="search-bar">
+            <input
+              type="text"
+              class="enter-city"
+              placeholder="Enter a city name..."
+              id="city-input"
+            />
+
+            <input
+              type="submit"
+              class="btn btn-outline-secondary"
+              id="submit"
+              value="Search"
+            />
+         
+   
+        <button id="weather-refresh" class="float-left btn btn-outline-secondary">
+          Current Location
+        </button>
+          </form>
+        </div>
+        <div class="date-time">
+          <small> Monday 17:18</small>
+        </div>
+        <h1>Riga</h1>
+        <div class="row">
+          <div class="col-6">7 C | F</div>
+          <div class="col-6">
+            <ul>
+              <li>Cloudy</li>
+              <li>Wind:2km/h</li>
+              <li>Humidity: 20%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="author">
+      <a href="https://github.com/agatevaska/pink-weather-app">
+      Open-source code </a>, by Agate Dārta Vaska
+      </div> 
     </div>
     <script src="src/index.js"></script>
   </body>
