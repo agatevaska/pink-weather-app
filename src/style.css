@@ -1,3 +1,23 @@
+.enter-city {
+  font-family: "Playfair Display", serif;
+  color: rgb(151, 104, 123);
+
+  padding: 8px;
+  border: 1px solid #6d757d;
+  border-radius: 5px;
+}
+#submit {
+  font-family: "Playfair Display", serif;
+  color: rgb(79, 65, 73);
+  padding: 8px 20px;
+  margin-left: 20px;
+}
+#weather-refresh {
+  font-family: "Playfair Display", serif;
+  color: rgb(79, 65, 73);
+  margin-left: 12px;
+  padding: 8px 32px;
+}
 .weather-app {
   max-width: 600px;
   margin: 50px auto;
@@ -31,6 +51,23 @@ li {
   font-family: "Playfair Display", serif;
   font-weight: 500;
 }
-.main-temp {
-  font-size: 80px;
+#temperature {
+  font-size: 70px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding-left: 20px;
+  color: rgb(150 105 123);
+}
+.units {
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+}
+.author {
+  max-width: 600px;
+  margin: auto;
+}
+
+i {
+  font-size: 90px;
+  color: rgb(151, 104, 123);
 }

@@ -17,6 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,700&family=Source+Sans+Pro&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/7287ea5535.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather app</title>
   </head>
@@ -53,8 +57,12 @@
         <h1>Riga</h1>
         <div class="row">
           <div class="col-6">
-            <span class="main-temp">7</span>
-            C | F
+            <div class="d-flex weather-temperature">
+              <i class="fa-regular fa-sun"></i>
+
+              <strong id="temperature"> 7</strong>
+              <span class="units"> °C | °F </span>
+            </div>
           </div>
           <div class="col-6">
             <ul>
@@ -64,11 +72,11 @@
             </ul>
           </div>
         </div>
-        <div class="author">
-          <a href="https://github.com/agatevaska/pink-weather-app">
-            Open-source code </a
-          >, by Agate Dārta Vaska
-        </div>
+      </div>
+      <div class="author">
+        <a href="https://github.com/agatevaska/pink-weather-app">
+          Open-source code </a
+        >, by Agate Dārta Vaska
       </div>
     </div>
     <script src="src/index.js"></script>
