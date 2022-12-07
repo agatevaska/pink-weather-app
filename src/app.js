@@ -1,4 +1,5 @@
-function showDate(date) {
+function showDate(timestamp) {
+  let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -20,9 +21,6 @@ function showDate(date) {
   let day = days[dayNumber];
   return `${day} ${hours}:${minutes}`;
 }
-let dateElement = document.querySelector("#date-time");
-let currentTime = new Date();
-dateElement.innerHTML = "Last updated " + showDate(currentTime);
 
 function getLocation(position) {
   let apiKey = "6a48a550fc04f170639e60d52b8a6bc5";
@@ -56,6 +54,9 @@ function showWeather(response) {
 
   document.querySelector("#humidity").innerHTML =
     "Humidity: " + Math.round(response.data.main.humidity) + "%";
+  document.querySelector("#date-time").innerHTML = showDate(
+    response.data.dt * 1000
+  );
 }
 
 function citySearch(city) {
