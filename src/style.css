@@ -14,10 +14,6 @@ h1 {
   font-family: "Playfair Display", serif;
   color: rgb(151, 104, 123);
 }
-i {
-  font-size: 90px;
-  color: rgb(151, 104, 123);
-}
 
 li {
   list-style: none;
@@ -39,6 +35,9 @@ li {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding-left: 20px;
   color: rgb(150 105 123);
+}
+#main-icon {
+  left: 10px;
 }
 .units {
   font-family: "Playfair Display", serif;
