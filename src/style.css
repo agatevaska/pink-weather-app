@@ -27,7 +27,7 @@ li {
 .description {
   font-weight: 800;
 }
-.date-time {
+#date-time {
   text-align: center;
   padding-top: 30px;
   font-family: "Playfair Display", serif;

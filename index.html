@@ -21,6 +21,7 @@
       src="https://kit.fontawesome.com/7287ea5535.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather app</title>
   </head>
@@ -28,7 +29,7 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <form class="search-bar">
+        <form class="search-bar" id="search-bar">
           <input
             type="text"
             class="enter-city"
@@ -51,10 +52,10 @@
           </button>
         </form>
 
-        <div class="date-time">
+        <div id="date-time">
           <small> Last updated Monday 17:18</small>
         </div>
-        <h1>Riga</h1>
+        <h1 id="h1">Riga</h1>
         <div class="row">
           <div class="col-6">
             <div class="d-flex weather-temperature">
@@ -66,9 +67,9 @@
           </div>
           <div class="col-6">
             <ul>
-              <li class="description">Cloudy</li>
-              <li>Wind:2km/h</li>
-              <li>Humidity: 20%</li>
+              <li class="description" id="description">Cloudy</li>
+              <li class="wind-speed" id="wind-speed">Wind:2km/h</li>
+              <li class="humidity" id="humidity">Feels like: 20%</li>
             </ul>
           </div>
         </div>
@@ -79,6 +80,6 @@
         >, by Agate Dārta Vaska
       </div>
     </div>
-    <script src="src/index.js"></script>
+    <script src="src/app.js"></script>
   </body>
 </html>
