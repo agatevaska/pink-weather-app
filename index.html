@@ -35,15 +35,14 @@
             class="enter-city"
             placeholder="Enter a city name..."
             id="city-input"
+            autocomplete="off"
           />
-
           <input
             type="submit"
             class="btn btn-outline-secondary"
             id="submit"
             value="Search"
           />
-
           <button
             id="weather-refresh"
             class="float-left btn btn-outline-secondary"
@@ -62,7 +61,9 @@
               <img src="" id="main-icon" />
 
               <strong id="temperature"> 7</strong>
-              <span class="units"> °C | °F </span>
+              <span class="units">
+                °C | <a href="#" id="fahrenheit-link">°F </a>
+              </span>
             </div>
           </div>
           <div class="col-6">

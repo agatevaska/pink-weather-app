@@ -63,6 +63,8 @@ function showWeather(response) {
       "src",
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function citySearch(city) {
@@ -78,3 +80,18 @@ function handleSubmit(event) {
 }
 let searchForm = document.querySelector("#search-bar");
 searchForm.addEventListener("submit", handleSubmit);
+
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  document.querySelector("#temperature").innerHTML = Math.round(
+    fahrenheitTemperature
+  );
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+citySearch("Riga");
