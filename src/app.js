@@ -47,6 +47,9 @@ function showForecast() {
 
 function getForecast(coordinates) {
   console.log(coordinates);
+  let apiKey = `97bed167ec49bff56e6c1b63daef9c86`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
 }
 
 function showWeather(response) {
@@ -136,5 +139,5 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
-citySearch("Riga");
+citySearch("Rīga");
 showForecast();
