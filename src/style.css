@@ -1,15 +1,3 @@
-#background-video {
-  height: 100vh;
-  width: 100vw;
-  object-fit: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
 h1 {
   text-align: center;
   font-weight: 700;
@@ -83,7 +71,7 @@ li {
   padding: 9px 23px;
 }
 .row {
-  padding: 30px;
+  padding: 20px;
 }
 .weather-temperature .active {
   color: black;
@@ -99,4 +87,39 @@ li {
 }
 .git-hub {
   color: #96697b;
+}
+#background-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.weather-forecast {
+  border-top: 1px solid rgba(202, 161, 178, 0.6);
+}
+.weather-forecast-date {
+  text-align: center;
+}
+.weather-forecast-temperature {
+  text-align: center;
+}
+.col-2 {
+  border: 1px solid rgba(202, 161, 178, 0.6);
+  border-radius: 10px;
+  transition: all 100ms ease-in-out;
+  font-family: "Playfair Display", serif;
+}
+.col-2:hover {
+  border: 1px solid rgba(202, 161, 178, 0.6);
+  border-radius: 10px;
+  background-color: #96697b;
+  color: #fff;
+}
+.forecast-icon {
+  margin: -5px;
 }
