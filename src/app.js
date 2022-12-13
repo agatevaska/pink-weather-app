@@ -22,7 +22,8 @@ function showDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function showForecast() {
+function showForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let forecastDays = ["Thu", "Fri", "Sat", "Sun", "Mon"];
@@ -50,6 +51,7 @@ function getForecast(coordinates) {
   let apiKey = `97bed167ec49bff56e6c1b63daef9c86`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
+  axios.get(apiUrl).then(showForecast);
 }
 
 function showWeather(response) {
@@ -140,4 +142,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
 citySearch("Rīga");
-showForecast();
