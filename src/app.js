@@ -22,23 +22,32 @@ function showDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function getLocation(position) {
-  let apiKey = "6a48a550fc04f170639e60d52b8a6bc5";
-  let lat = position.coords.latitude;
-  let long = position.coords.longitude;
-  let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=${units}`;
-
-  axios.get(apiUrl).then(showWeather);
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let forecastDays = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  forecastDays.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">      
+  <div class="weather-forecast-date">${day}</div>
+ <img class="forecast-icon"
+                src="http://openweathermap.org/img/wn/04n@2x.png"
+                width="70px"
+              />
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temp-max"> 12° </span>
+                <span class="weather-forecast-temp-min"> 3°</span>
+              </div>
+            </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
-function currentGeoLocation(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(getLocation);
+function getForecast(coordinates) {
+  console.log(coordinates);
 }
-
-let geoLocationButton = document.querySelector("#weather-refresh");
-geoLocationButton.addEventListener("click", currentGeoLocation);
 
 function showWeather(response) {
   document.querySelector("#h1").innerHTML = response.data.name;
@@ -65,6 +74,8 @@ function showWeather(response) {
     );
 
   celsiusTemperature = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
 
 function citySearch(city) {
@@ -80,6 +91,24 @@ function handleSubmit(event) {
 }
 let searchForm = document.querySelector("#search-bar");
 searchForm.addEventListener("submit", handleSubmit);
+
+function getLocation(position) {
+  let apiKey = "6a48a550fc04f170639e60d52b8a6bc5";
+  let lat = position.coords.latitude;
+  let long = position.coords.longitude;
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=${units}`;
+
+  axios.get(apiUrl).then(showWeather);
+}
+
+function currentGeoLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(getLocation);
+}
+
+let geoLocationButton = document.querySelector("#weather-refresh");
+geoLocationButton.addEventListener("click", currentGeoLocation);
 
 function showFahrenheitTemp(event) {
   event.preventDefault();
@@ -108,3 +137,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
 citySearch("Riga");
+showForecast();

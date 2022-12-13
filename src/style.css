@@ -104,15 +104,21 @@ li {
 }
 .weather-forecast-date {
   text-align: center;
+  font-family: "Playfair Display", serif;
 }
 .weather-forecast-temperature {
   text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 200;
+  font-size: 14px;
 }
 .col-2 {
   border: 1px solid rgba(202, 161, 178, 0.6);
   border-radius: 10px;
   transition: all 100ms ease-in-out;
-  font-family: "Playfair Display", serif;
+  padding: 10px 10px 10px 10px;
+  margin: 7px;
 }
 .col-2:hover {
   border: 1px solid rgba(202, 161, 178, 0.6);
@@ -122,4 +128,7 @@ li {
 }
 .forecast-icon {
   margin: -5px;
+}
+.weather-forecast-temp-min {
+  opacity: 0.6;
 }
